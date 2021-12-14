@@ -9,6 +9,7 @@ do
   string=PPPPPerformance_Br_$((x))
   git branch $string
   git checkout $string
+  touch randomFile$x
   git add .
   git commit -m "s $x"
   #git push -u origin $string
