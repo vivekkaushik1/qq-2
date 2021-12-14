@@ -3,20 +3,20 @@ echo hello world
 x=1
 y=1
 j=1
-while [ $x -le 10 ]
+while [ $x -le 1 ]
 do
   echo "Welcome $x times"
-  string=PQPPPPerformance_Br_$((x))
+  string=PQP_BR_$((x))
   git branch $string
   git checkout $string
-  touch randomFile$x
+  touch randomFisle$x
   git add .
   git commit -m "s $x"
   #git push -u origin $string
-  #git push -u origin $string
-  git push --set-upstream origin $string
   git push -u origin $string
+  git push --set-upstream origin $string
+  #git push -u origin $string
   echo $string
- #sleep 5.0
+
   x=$(( $x + 1 ))
 done
