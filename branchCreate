@@ -6,7 +6,7 @@ j=1
 while [ $x -le 10 ]
 do
   echo "Welcome $x times"
-  string=PPPPPerformance_Br_$((x))
+  string=PQPPPPerformance_Br_$((x))
   git branch $string
   git checkout $string
   touch randomFile$x
