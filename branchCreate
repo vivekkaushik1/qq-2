@@ -9,6 +9,9 @@ do
   string=Performance_Br_$((x))
   git branch $string
   git checkout $string
+  touch Randomfile$((x))
+  git push
+  git push --set-upstream origin $string
 while [ $y -le 200 ]
 do
   string="touch randfile$((j+x)) && git add . && git commit -m '$((j+x)):randfile_$((j+x))'"
