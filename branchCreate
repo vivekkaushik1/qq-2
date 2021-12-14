@@ -7,7 +7,7 @@ while [ $x -le 1 ]
 do
   git fetch origin
   echo "Welcome $x times"
-  string=PQP_BR_$((x))
+  string=QP1_BR_$((x))
   git branch $string
   git checkout $string
   touch randomFisle$x
