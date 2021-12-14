@@ -7,10 +7,10 @@ while [ $x -le 1 ]
 do
   git fetch origin
   echo "Welcome $x times"
-  string=QP1_BR_$((x))
+  string=QP2_BR_$((x))
   git branch $string
   git checkout $string
-  touch randomFisle$x
+  touch randsmFisle$x
   git add .
   git commit -m "s $x"
   #git push -u origin $string
