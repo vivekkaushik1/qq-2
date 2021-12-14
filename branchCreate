@@ -5,6 +5,7 @@ y=1
 j=1
 while [ $x -le 1 ]
 do
+  git fetch origin
   echo "Welcome $x times"
   string=PQP_BR_$((x))
   git branch $string
