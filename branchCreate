@@ -10,11 +10,12 @@ do
   git branch $string
   git checkout $string
   git add .
-  git commit -m "s"
-  git push -u origin $string
-  git push -u origin $string
+  git commit -m "s $x"
+  #git push -u origin $string
+  #git push -u origin $string
   git push --set-upstream origin $string
+  git push -u origin $string
   echo $string
-  sleep 5.0
+ #sleep 5.0
   x=$(( $x + 1 ))
 done
