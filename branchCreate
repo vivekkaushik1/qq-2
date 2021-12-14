@@ -3,15 +3,16 @@ echo hello world
 x=1
 y=1
 j=99999999
-while [ $x -le 10000 ]
+while [ $x -le 10 ]
 do
   echo "Welcome $x times"
-  string=PPerformance_Br_$((x))
-  git branch $string
+  string=PPPerformance_Br_$((x))
+  git branch $string main
   git checkout $string
-while [ $y -le 200 ]
+  echo "Welcome $x times branch created" 
+while [ $y -le 20 ]
 do
-  string="touch randfile$((j+x)) && git add . && git commit -m '$((j+x)):randfile_$((j+x))'"
+  string="touch randfile$((j)) && git add . && git commit -m "sss $x $y"
   y=$(( $y + 1 ))
 done
   git push -u origin $string
