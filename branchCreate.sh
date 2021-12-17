@@ -3,7 +3,7 @@ echo hello world
 x=1
 y=1
 j=1
-while [ $x -le 1000 ]
+while [ $x -le 400 ]
 do
   echo "Welcome $x times"
   string=AA_PR_$((x))
