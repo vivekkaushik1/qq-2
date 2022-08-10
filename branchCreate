@@ -3,23 +3,26 @@ echo hello world
 x=1
 y=1
 j=1
-while [ $x -le 10 ]
+while [ $x -le 1 ]
 do
   echo "Welcome $x times"
-  string=PPerformance_Br_$((x))
-  git branch $string
-  git checkout $string
-  git add .
-  git commit -m "s"
-  git push -u origin $string
-while [ $y -le 20 ]
-do
-  string="touch randfile$((j+x)) && git add . && git commit -m '$((j+x)):randfile_$((j+x))'"
-  y=$(( $y + 1 ))
-done
+  string=Test_ADO_Perf_$((x-1))
+  string1=ADO_Perf_$((x))
+  git branch $string master
+  git checkout -b $string
   git push -u origin $string
   git push --set-upstream origin $string
   echo $string
- #sleep 5.0
   x=$(( $x + 1 ))
+  sh ./createCOmmit.sh
+  rm -rf random*
+  git add .
+  git commit -m "ADO Commits"
+  git push
+  git tag -a v1.1 -m "version 1.1"
+  git tag -a v2.1 -m "version 2.1"
+  git push --tags origin
+  git checkout master
+  git merge $string
 done
+
